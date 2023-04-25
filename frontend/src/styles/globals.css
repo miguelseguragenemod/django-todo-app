@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --blue: #051d53;
+  --blue-genemod: #0fbae3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  background: var(--blue);
+}
+
+.btn {
+  @apply px-3 py-1 transition-all rounded;
+}
+.btn-fw {
+  @apply w-full;
+}
+.btn-primary {
+  @apply text-white bg-blue-500 hover:bg-blue-600;
+}
+.btn-alert {
+  @apply text-white bg-red-500 hover:bg-red-600;
+}
+
+.toggle-active {
+  @apply text-white transition-all bg-blue-900;
+}
+.toggle-disabled {
+  @apply text-gray-400 transition-all bg-gray-100 hover:bg-gray-300 hover:text-gray-500;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
